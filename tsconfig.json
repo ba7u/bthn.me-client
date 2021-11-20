@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "backend/*": ["src/backend/*"],
+      "views/*": ["src/views/*"],
+      "config/*": ["src/config/*"],
+      "api/*": ["src/api/*"],
+      "helpers/*": ["src/helpers/*"],
+      "mocks/*": ["mocks/*"],
+      "utils/*": ["utils/*"],
+      "types/*": ["src/types/*"]
+    }
+  },
+  "include": ["**.*.d.ts", "**/*.ts", "**/*.tsx", "**/*.json"],
+  "exclude": ["node_modules", "utils/eslint"]
+}

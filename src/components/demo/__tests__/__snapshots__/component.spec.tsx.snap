@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DemoComponent renders without throwing any errors 1`] = `
+<div>
+  <div>
+    <span>
+      DemoComponent - Desktop
+    </span>
+    <span>
+      lorem
+    </span>
+  </div>
+</div>
+`;

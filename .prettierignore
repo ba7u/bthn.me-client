@@ -1,0 +1,5 @@
+.next
+yarn.lock
+yarn-error.log
+coverage
+result/

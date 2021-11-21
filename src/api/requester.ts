@@ -1,6 +1,6 @@
-import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponseTransformer } from 'axios';
 
-export class ApiFactory {
+export class ApiRequester {
   /**
    * axios instance
    */
@@ -16,7 +16,13 @@ export class ApiFactory {
   public request<T>(config: AxiosRequestConfig): Promise<T | AxiosError> {
     return new Promise((resolve, reject) => {
       this.instance
-        .request(config)
+        .request({
+          ...config,
+          transformResponse: [
+            ...(axios.defaults.transformResponse as AxiosResponseTransformer[]),
+            config.transformResponse as AxiosResponseTransformer,
+          ],
+        })
         .then((response) => resolve(response.data))
         .catch(reject);
     });

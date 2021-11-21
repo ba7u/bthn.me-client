@@ -1,7 +1,7 @@
-import { ApiFactory } from './factory';
+import { ApiRequester } from './requester';
 import { ApiMakeFactoryPropsInterface } from './make-factory.props.interface';
 
-export const ApiMakeFactory = (options: ApiMakeFactoryPropsInterface): ApiFactory =>
-  new ApiFactory({
+export const ApiMakeFactory = (options: ApiMakeFactoryPropsInterface): ApiRequester =>
+  new ApiRequester({
     baseURL: options.getOrigin(),
   });

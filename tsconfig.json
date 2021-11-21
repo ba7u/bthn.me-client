@@ -20,6 +20,7 @@
       "views/*": ["src/views/*"],
       "config/*": ["src/config/*"],
       "api/*": ["src/api/*"],
+      "model/*": ["src/model/*"],
       "helpers/*": ["src/helpers/*"],
       "mocks/*": ["mocks/*"],
       "utils/*": ["utils/*"],

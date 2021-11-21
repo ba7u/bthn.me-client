@@ -1,6 +1,6 @@
 import { ApiMakeFactory } from 'api/make-factory';
 
-export const ApiFactory = () =>
+export const ApiStrapiFactory = () =>
   ApiMakeFactory({
     getOrigin: () => process.env.STRAPI_URL as string,
   });
